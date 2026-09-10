@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>taiday0の公式サイト</title>
+    <title>taiday0's official website</title>
     <style>
         :root {
             --bg-color: #0d1117;
@@ -163,9 +163,10 @@
 <body>
 
     <header>
-        <h1>taiday0の公式サイト</h1>
-        <p>HTMLでゲーム作る人</p>
-        <a href="https://scratch.mit.edu/users/pianodemusic/" class="scratch-header-btn" target="_blank">🐱 Scratchプロフィールを見る</a>
+        <h1>taiday0's official website</h1>
+        <p>I make games using HTML.</p>
+        <a href="https://scratch.mit.edu/users/pianodemusic/" class="scratch-header-btn" target="_blank">🐱 View Scratch profile</a>
+         <a href="taiday0.github.io/my-official-site" class="scratch-header-btn" target="_blank">日本語🗾</a>
     </header>
 
     <main>
@@ -173,8 +174,8 @@
         <section>
             <h2>About Me</h2>
             <div class="profile-box">
-                <p>はじめまして、taiday0です。GitHub Pagesを活用して、ブラウザで手軽に遊べるゲーム制作・公開を行っています。</p>
-                <p>また、Scratchでは <a href="https://scratch.mit.edu/users/pianodemusic" target="_blank">pianodemusic</a> としても活動しており、様々なミニゲームやプログラムを不定期に投稿しています！</p>
+                <p>Nice to meet you, I'm taiday0. I use GitHub Pages to create and publish games that can be easily played in a web browser.</p>
+                <p>I am also active on Scratch under the name <a href="https://scratch.mit.edu/users/pianodemusic" target="_blank">"pianodemusic,"</a>"pianodemusic," where I occasionally post various mini-games and programs!</p>
             </div>
         </section>
 
@@ -187,9 +188,9 @@
                 <div class="work-card">
                     <div class="work-body">
                         <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
-                        <h3 class="work-title">シューティングゲーム</h3>
-                        <p class="work-desc">スペックが低くても遊べるのを重視したブラウザ向けシューティングゲーム</p>
-                        <a href="/shooting-game/" class="work-btn">ゲームをプレイする</a>
+                        <h3 class="work-title">shooting game</h3>
+                        <p class="work-desc">A browser-based shooting game designed to be playable even on low-spec systems.</p>
+                        <a href="/shooting-game/" class="work-btn">Play the game</a>
                     </div>
                 </div>
 
@@ -197,9 +198,9 @@
                 <div class="work-card">
                     <div class="work-body">
                         <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
-                        <h3 class="work-title">パズルゲーム</h3>
-                        <p class="work-desc">ブラウザで簡単に遊べる、テトリス風のパズルゲーム</p>
-                        <a href="/puzzle-game/" class="work-btn">ゲームをプレイする</a>
+                        <h3 class="work-title">puzzle game</h3>
+                        <p class="work-desc">A Tetris-style puzzle game that is easy to play in your browser.</p>
+                        <a href="/puzzle-game/" class="work-btn">Play the game</a>
                     </div>
                 </div>
 
@@ -207,9 +208,9 @@
                 <div class="work-card">
                     <div class="work-body">
                         <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
-                        <h3 class="work-title">ブロック崩し</h3>
-                        <p class="work-desc">王道のブロック崩し。パドルを動かしてボールを打ち返し、すべてのブロックを崩す爽快なゲームです。</p>
-                        <a href="/block-break/" class="work-btn">ゲームをプレイする</a>
+                        <h3 class="work-title">Block Breaker</h3>
+                        <p class="work-desc">A classic block-breaking game. It offers an exhilarating experience where you move your paddle to hit the ball back and break all the blocks.</p>
+                        <a href="/block-break/" class="work-btn">Play the game</a>
                     </div>
                 </div>
 
@@ -217,15 +218,15 @@
                 <div class="work-card">
                     <div class="work-body">
                         <div class="tags"><span class="tag">MacOS App</span></div>
-                        <h3 class="work-title">Chropa Browser MacOS版</h3>
-                        <p class="work-desc">わたしが作ったchromiumベースのブラウザです</p>
-                        <p class="work-desc">実行するときに壊れていますと出る時は、下のコピーを押してターミナルでコマンドを実行してください</p>
-                        <a href="https://github.com/taiday0/Chropa-browser/releases/download/v1.0/Chropa.Browser.dmg" class="work-btn">ダウンロードする</a>
+                        <h3 class="work-title">Chropa Browser MacOS edition(Japanese only)</h3>
+                        <p class="work-desc">This is a Chromium-based browser I created.</p>
+                        <p class="work-desc">If an error indicating that the program is damaged appears when you try to run it, please click the "Copy" button below and execute the command in the Terminal.</p>
+                        <a href="https://github.com/taiday0/Chropa-browser/releases/download/v1.0/Chropa.Browser.dmg" class="work-btn">Download</a>
                         
                         <!-- コピー対象のテキストボックスとボタン -->
 <div class="copy-box">
   <input type="text" id="copy-text" value="xattr -dr com.apple.quarantine /Applications/"Chropa Browser.app"" readonly>
-  <button onclick="copyText()">コピー</button>
+  <button onclick="copyText()">copy</button>
 </div>
 <span id="copy-message" style="margin-left: 10px; color: green;"></span>
 
@@ -237,10 +238,10 @@
     
     // テキストを選択してクリップボードにコピー
     navigator.clipboard.writeText(textInput.value).then(() => {
-      message.innerText = "コピーしました！";
+      message.innerText = "Copied!";
       setTimeout(() => { message.innerText = ""; }, 2000);
     }).catch(err => {
-      message.innerText = "コピーに失敗しました";
+      message.innerText = "Copy failed.";
     });
   }
 </script>
@@ -248,18 +249,7 @@
                     </div>
                 </div>
 
-                 <!-- "Chropa Browser Windows版" -->
-                <div class="work-card">
-                    <div class="work-body">
-                        <div class="tags"><span class="tag">Windows exe</span></div>
-                        <h3 class="work-title">Chropa Browser MacOS版</h3>
-                        <p class="work-desc">わたしが作ったchromiumベースのブラウザです</p>
-                        <a href="https://github.com/taiday0/Chropa-browser/releases/download/v1.0/Chropa.Browser.exe" class="work-btn">ダウンロードする</a>
-                        
-
-                    </div>
-                </div>
-
+               
                 
             </div>
         </section>
@@ -268,7 +258,7 @@
         <section>
             <h2>Future Plans</h2>
             <div class="profile-box">
-                <p>今後も2Dのゲームも作っていく予定です。</p>
+                <p>We plan to continue making 2D games as well.</p>
             </div>
         </section>
     </main>
