@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>taiday0の公式サイト</title>
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --text-color: #c9d1d9;
+            --text-bright: #ffffff;
+            --accent-color: #30363d;
+            --card-bg: #161b22;
+            --primary-blue: #58a6ff;
+            --btn-hover: #1f6feb;
+            --scratch-orange: #ffab19;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+        /* ヒーローセクション */
+        header {
+            background: linear-gradient(135deg, #161b22 0%, #21262d 100%);
+            color: var(--text-bright);
+            text-align: center;
+            padding: 4rem 1rem;
+            border-bottom: 1px solid var(--accent-color);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+            /* 文字自体をきれいな虹色のグラデーションにする設定 */
+            background: linear-gradient(to right, #ff5555, #ff55ff, #58a6ff, #55ff55, #ffff55);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: inline-block;
+            /* 複数の色の光を重ねて、文字の周りをカラフルに光らせる設定 */
+            filter: drop-shadow(0 0 8px rgba(88, 166, 255, 0.6)) 
+                    drop-shadow(0 0 15px rgba(255, 85, 255, 0.4));
+        }
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+        .scratch-header-btn {
+            display: inline-block;
+            background-color: var(--scratch-orange);
+            color: #ffffff;
+            text-decoration: none;
+            padding: 0.6rem 1.5rem;
+            border-radius: 20px;
+            font-weight: bold;
+            margin-top: 1.5rem;
+            transition: background-color 0.2s;
+        }
+        .scratch-header-btn:hover {
+            background-color: #e59310;
+        }
+        main {
+            max-width: 900px;
+            margin: 2rem auto;
+            padding: 0 1.5rem;
+        }
+        h2 {
+            font-size: 1.6rem;
+            color: var(--text-bright);
+            border-bottom: 3px solid var(--accent-color);
+            padding-bottom: 0.3rem;
+            margin-top: 3rem;
+        }
+        /* プロフィール */
+        .profile-box {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid var(--accent-color);
+        }
+        .profile-box a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        .profile-box a:hover {
+            text-decoration: underline;
+        }
+        /* 制作実績カード */
+        .works-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        .work-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--accent-color);
+            display: flex;
+            flex-direction: column;
+        }
+        .work-body {
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+        .work-title {
+            color: var(--text-bright);
+            margin: 0 0 0.5rem 0;
+            font-size: 1.3rem;
+        }
+        .work-desc {
+            font-size: 0.95rem;
+            color: #8b949e;
+            margin: 0 0 1.5rem 0;
+            flex-grow: 1;
+        }
+        .work-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-blue);
+            color: #0d1117;
+            text-decoration: none;
+            padding: 0.7rem;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: background-color 0.2s, color 0.2s;
+        }
+        .work-btn:hover {
+            background-color: var(--btn-hover);
+            color: var(--text-bright);
+        }
+        /* スキル・タグ */
+        .tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .tag {
+            background: #21262d;
+            color: var(--primary-blue);
+            border: 1px solid var(--accent-color);
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            font-size: 0.9rem;
+            color: #8b949e;
+            margin-top: 4rem;
+            border-top: 1px solid var(--accent-color);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>taiday0の公式サイト</h1>
+        <p>HTMLでゲーム作る人</p>
+        <a href="https://scratch.mit.edu/users/pianodemusic/" class="scratch-header-btn" target="_blank">🐱 Scratchプロフィールを見る</a>
+    </header>
+
+    <main>
+        <!-- プロフィールセクション -->
+        <section>
+            <h2>About Me</h2>
+            <div class="profile-box">
+                <p>はじめまして、taiday0です。GitHub Pagesを活用して、ブラウザで手軽に遊べるゲーム制作・公開を行っています。</p>
+                <p>また、Scratchでは <a href="https://scratch.mit.edu/users/pianodemusic" target="_blank">pianodemusic</a> としても活動しており、様々なミニゲームやプログラムを不定期に投稿しています！</p>
+            </div>
+        </section>
+
+        <!-- 制作実績セクション -->
+        <section>
+            <h2>Works</h2>
+            <div class="works-grid">
+                
+                <!-- シューティングゲーム -->
+                <div class="work-card">
+                    <div class="work-body">
+                        <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
+                        <h3 class="work-title">シューティングゲーム</h3>
+                        <p class="work-desc">スペックが低くても遊べるのを重視したブラウザ向けシューティングゲーム</p>
+                        <a href="/shooting-game/" class="work-btn">ゲームをプレイする</a>
+                    </div>
+                </div>
+
+                <!-- パズルゲーム -->
+                <div class="work-card">
+                    <div class="work-body">
+                        <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
+                        <h3 class="work-title">パズルゲーム</h3>
+                        <p class="work-desc">ブラウザで簡単に遊べる、テトリス風のパズルゲーム</p>
+                        <a href="/puzzle-game/" class="work-btn">ゲームをプレイする</a>
+                    </div>
+                </div>
+
+                <!-- ブロック崩しゲーム -->
+                <div class="work-card">
+                    <div class="work-body">
+                        <div class="tags"><span class="tag">HTML5</span><span class="tag">JavaScript</span></div>
+                        <h3 class="work-title">ブロック崩し</h3>
+                        <p class="work-desc">王道のブロック崩し。パドルを動かしてボールを打ち返し、すべてのブロックを崩す爽快なゲームです。</p>
+                        <a href="/block-break/" class="work-btn">ゲームをプレイする</a>
+                    </div>
+                </div>
+
+                 <!-- "Chropa Browser MacOS版" -->
+                <div class="work-card">
+                    <div class="work-body">
+                        <div class="tags"><span class="tag">MacOS App</span></div>
+                        <h3 class="work-title">Chropa Browser MacOS版</h3>
+                        <p class="work-desc">わたしが作ったchromiumベースのブラウザです</p>
+                        <p class="work-desc">実行するときに壊れていますと出る時は、下のコピーを押してターミナルでコマンドを実行してください</p>
+                        <a href="https://github.com/taiday0/Chropa-browser/releases/download/v1.0/Chropa.Browser.dmg" class="work-btn">ダウンロードする</a>
+                        
+                        <!-- コピー対象のテキストボックスとボタン -->
+<div class="copy-box">
+  <input type="text" id="copy-text" value="xattr -dr com.apple.quarantine /Applications/"Chropa Browser.app"" readonly>
+  <button onclick="copyText()">コピー</button>
+</div>
+<span id="copy-message" style="margin-left: 10px; color: green;"></span>
+
+<!-- JavaScriptによるコピー処理 -->
+<script>
+  function copyText() {
+    const textInput = document.getElementById("copy-text");
+    const message = document.getElementById("copy-message");
+    
+    // テキストを選択してクリップボードにコピー
+    navigator.clipboard.writeText(textInput.value).then(() => {
+      message.innerText = "コピーしました！";
+      setTimeout(() => { message.innerText = ""; }, 2000);
+    }).catch(err => {
+      message.innerText = "コピーに失敗しました";
+    });
+  }
+</script>
+
+                    </div>
+                </div>
+
+                 <!-- "Chropa Browser Windows版" -->
+                <div class="work-card">
+                    <div class="work-body">
+                        <div class="tags"><span class="tag">Windows exe</span></div>
+                        <h3 class="work-title">Chropa Browser MacOS版</h3>
+                        <p class="work-desc">わたしが作ったchromiumベースのブラウザです</p>
+                        <a href="https://github.com/taiday0/Chropa-browser/releases/download/v1.0/Chropa.Browser.exe" class="work-btn">ダウンロードする</a>
+                        
+
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+        
+        <!-- 今後の展望 -->
+        <section>
+            <h2>Future Plans</h2>
+            <div class="profile-box">
+                <p>今後も2Dのゲームも作っていく予定です。</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 taiday0. Hosted on GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
